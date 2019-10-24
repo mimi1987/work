@@ -13,7 +13,7 @@ def order_matchrule(matchrule, *args):
     mr = matchrule.split("|")
     res = []
     try:
-        if len(args) == 3:
+        if len(args) <= 3:
             for arg in args:
                 res.append(mr[int(arg)])
     except:      
@@ -26,7 +26,8 @@ def order_matchrule(matchrule, *args):
     copy(mr_result)
     
 
-matchrule = input("Enter the matchrule: ")
-args = input("Enter the three indexes without any spaces: ")
-order_matchrule(matchrule, *args)
+while True:
+    matchrule = input("Enter the matchrule: ")
+    args = input("Enter the three indexes without any spaces: ")
+    order_matchrule(matchrule, *args)
 
