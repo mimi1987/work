@@ -2,6 +2,8 @@
 # Version: 0.1
 # Author: MiMi
 
+from pyperclip import copy
+
 def order_matchrule(matchrule, *args):
     """General: Prints a string in order of *args.
         Works only for oneline matchrules.
@@ -19,8 +21,10 @@ def order_matchrule(matchrule, *args):
         matchrule = input("Enter the matchrule: ")
         args = input("Enter the three indexes without any spaces: ")
         order_matchrule(matchrule, *args)
-        
-    print("|".join(res))
+    mr_result = "|".join(res)    
+    print(mr_result)
+    copy(mr_result)
+    
 
 matchrule = input("Enter the matchrule: ")
 args = input("Enter the three indexes without any spaces: ")
