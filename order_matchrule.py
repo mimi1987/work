@@ -18,6 +18,7 @@ def order_matchrule(matchrule, *args):
                 res.append(mr[int(arg)])
     except:      
         print("Too much arguments only three indices required (0, 1, 2).")
+    else:
         matchrule = input("Enter the matchrule: ")
         args = input("Enter the three indices without any spaces: ")
         order_matchrule(matchrule, *args)
@@ -30,4 +31,3 @@ while True:
     matchrule = input("Enter the matchrule: ")
     args = input("Enter the three indices without any spaces: ")
     order_matchrule(matchrule, *args)
-
