@@ -5,9 +5,10 @@
 from pyperclip import copy
 
 def order_matchrule(matchrule, indices):
-    """General: Prints a string in order of *args.
-        Works only for oneline matchrules.
-        Parameters: *args takes three indices in the order the result is wanted."""
+  """General: Orders a matchrule in given order of indices.
+     Arguments: Matchrule is a string which gets split up into a list
+     by a |.
+     Indices is a number which represents the index of the array."""
     
     mr = matchrule.split("|")
     res = []
