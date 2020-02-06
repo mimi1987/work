@@ -1,5 +1,5 @@
 # Description: Script orders the three parts of the matchrule.
-# Version: 0.20
+# Version: 0.11
 # Author: MiMi
 
 from pyperclip import copy
