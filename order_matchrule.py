@@ -1,5 +1,5 @@
 # Description: Script orders the three parts of the matchrule.
-# Version: 0.5
+# Version: 0.20
 # Author: MiMi
 
 from pyperclip import copy
@@ -11,20 +11,19 @@ def order_matchrule(matchrule, indices):
     
     mr = matchrule.split("|")
     res = []
-    print(indices)
     try:
-        if len(indices) <= 3:
+        if len(indices) == len(mr):
             for i in indices:
                 res.append(mr[int(i)])
     except:      
-        print("Too much arguments only three indices required (0, 1, 2).")
+        print("There must be as many indices as list elements!")
+        
     mr_result = "|".join(res)    
     print(mr_result)
     copy(mr_result)
     
 
 while True:
-    matchrule = input("Enter the matchrule: ")
-    indices = tuple(input("Enter the three indices without any spaces: "))
-    print(indices)
+    matchrule = input("MATCHRULE: ")
+    indices = tuple(input("INDICES (no spaces): "))
     order_matchrule(matchrule, indices)
