@@ -11,7 +11,7 @@ use Data::Dumper;
 
 # GLOBAL VARIABLES
 #my$csv_path = <STDIN>; ALTERNATIV!!!!
-my $csv_path = 'C:\Users\Geizhals\Downloads\Produktfinder-2021-02-09.csv';
+my $csv_path = 'PUT IN THE DONWLOAD PATH!!!';
 tie my %header_hash, "Tie::IxHash";
 
 
