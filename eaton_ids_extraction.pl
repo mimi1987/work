@@ -18,7 +18,7 @@ while (my $line = <READ>)
   push @IDs, $id;
 }
 
-# Sort the @IDs in descending order
+# Sort the @IDs in descending order.
 @IDs = sort @IDs;
 
 # Write the found ids into the WRITE file handle.
@@ -26,6 +26,10 @@ foreach my $id (@IDs)
 {
   print WRITE "$id\n";
 }
+
+# Close the two file handles.
+close READ;
+close WRITE;
 
 # Print a message that the program finished.
 say "All lines are written into the file: $write_path";
