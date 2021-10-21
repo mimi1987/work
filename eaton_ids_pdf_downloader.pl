@@ -1,5 +1,9 @@
 use v5.30.0;
 use LWP::Simple;
+use IO::Handle;
+
+# Shows the output every second in the loop when using sleep.
+STDOUT->autoflush(1);
 
 # Global Variables.
 my $read_file_path = 'C:\Users\michaelm\Downloads\eaton_ids.txt';
@@ -25,9 +29,10 @@ while (my $id = <READ>)
 # Download all the PDF files from the eaton website.
 foreach my $ID (@IDs)
 {
-  $download_url = $download_url . $model . $ID . $parameter;
-  getstore $download_url, "$base_storage_path_for_pdfs" . "$ID.pdf" or warn "Download Failed!";
-  sleep 3;
+  my $url = "";
+  $url = $download_url . $model . $ID . $parameter;
+  getstore $url, "$base_storage_path_for_pdfs" . "$ID.pdf" or warn "Download Failed!";
+  sleep(3);
 }
 
 # END of the program.
