@@ -31,8 +31,8 @@ foreach my $ID (@IDs)
 {
   my $url = "";
   $url = $download_url . $model . $ID . $parameter;
-  say $url;
-  #getstore $url, "$base_storage_path_for_pdfs" . "$ID.pdf" or warn "Download Failed!";
+  say "Downloaded: $url";
+  getstore $url, "$base_storage_path_for_pdfs" . "$ID.pdf" or warn "Download Failed!";
   sleep(5);
 }
 
