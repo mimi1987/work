@@ -13,7 +13,7 @@ my $download_url = 'https://datasheet.eaton.com/datasheet.php';
 my $model = '?model=';
 my $parameter = '&locale=en_GB&type=pdf';
 
-# Open the file handles READ to read the Eaton IDs.
+# Open the file handle READ to read the Eaton IDs.
 open READ, '<', $read_file_path or die "Couldn't open the file: $!\n";
 
 
