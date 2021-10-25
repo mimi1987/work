@@ -37,4 +37,5 @@ foreach my $ID (@IDs)
 }
 
 # END of the program.
+close READ;
 say "All Downloads are finished.";
